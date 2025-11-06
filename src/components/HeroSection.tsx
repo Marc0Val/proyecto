@@ -1,24 +1,23 @@
-import { MapPin, Store } from 'lucide-react';
+import { MapPin, Store } from "lucide-react";
 
 export default function HeroSection() {
   const handleDownload = () => {
-    const element = document.getElementById('descargas');
+    const element = document.getElementById("descargas");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleExplore = () => {
-    const element = document.getElementById('explora');
+    const element = document.getElementById("explora");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
- 
-  const pinkMain = '#F4B6B6'; 
-  const pinkHover = '#F19292';
-  const pinkLight = '#FADCDC'; 
+  const pinkMain = "#F4B6B6";
+  const pinkHover = "#F19292";
+  const pinkLight = "#FADCDC";
 
   return (
     <section
@@ -32,10 +31,15 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-6 md:space-y-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Descubre, ordena, y explora platillos y restaurantes
+              Descubre y explora restaurantes y platillos
             </h2>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              con <span className="font-bold" style={{ color: pinkMain }}>UMAI</span> disfruta de una interfaz llamativa para explorar restaurantes y platillos.
+              Con{" "}
+              <span className="font-bold" style={{ color: pinkMain }}>
+                UMAI
+              </span>{" "}
+              prueba la experiencia de nuestra app móvil — una interfaz pensada
+              para descubrir sitios y contenido, no para delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -62,17 +66,17 @@ export default function HeroSection() {
                   borderColor: pinkMain,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#FFF0F0';
+                  e.currentTarget.style.backgroundColor = "#FFF0F0";
                   e.currentTarget.style.color = pinkHover;
                   e.currentTarget.style.borderColor = pinkHover;
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'white';
+                  e.currentTarget.style.backgroundColor = "white";
                   e.currentTarget.style.color = pinkMain;
                   e.currentTarget.style.borderColor = pinkMain;
                 }}
               >
-                Explora
+                Ver App
               </button>
             </div>
           </div>
@@ -86,7 +90,7 @@ export default function HeroSection() {
             >
               <img
                 src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Delicious burger"
+                alt="App demo en dispositivo móvil"
                 className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
               />
 
@@ -94,19 +98,27 @@ export default function HeroSection() {
                 <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin size={20} style={{ color: pinkMain }} />
-                    <h3 className="font-semibold text-gray-900">Localiza Burgers</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      Localiza restaurantes
+                    </h3>
                   </div>
-                  <p className="text-sm text-gray-600">320 restaurantes emplazados</p>
+                  <p className="text-sm text-gray-600">
+                    Explora ubicaciones y menús
+                  </p>
                 </div>
 
                 <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-2 mb-2">
                     <Store size={20} style={{ color: pinkMain }} />
-                    <h3 className="font-semibold text-gray-900">Burger Loca</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      Ejemplo de interfaz móvil
+                    </h3>
                   </div>
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
+                      <span key={i} className="text-yellow-400">
+                        ★
+                      </span>
                     ))}
                     <span className="text-sm text-gray-600 ml-1">(4.9)</span>
                   </div>

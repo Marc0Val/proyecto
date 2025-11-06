@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 
 interface DishCardProps {
   name: string;
@@ -8,9 +8,15 @@ interface DishCardProps {
   image: string;
 }
 
-export default function DishCard({ name, restaurant, rating, totalRatings, image }: DishCardProps) {
-  const handleOrder = () => {
-    alert(`Ordenando ${name} de ${restaurant}...`);
+export default function DishCard({
+  name,
+  restaurant,
+  rating,
+  totalRatings,
+  image,
+}: DishCardProps) {
+  const handleViewDetails = () => {
+    alert(`Mostrando detalles de ${name} en ${restaurant}...`);
   };
 
   return (
@@ -34,7 +40,11 @@ export default function DishCard({ name, restaurant, rating, totalRatings, image
             <Star
               key={i}
               size={16}
-              className={i < Math.floor(rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}
+              className={
+                i < Math.floor(rating)
+                  ? "fill-yellow-400 text-yellow-400"
+                  : "text-gray-300"
+              }
             />
           ))}
           <span className="text-sm text-gray-600 ml-1">
@@ -43,10 +53,10 @@ export default function DishCard({ name, restaurant, rating, totalRatings, image
         </div>
 
         <button
-          onClick={handleOrder}
+          onClick={handleViewDetails}
           className="w-full py-2.5 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors font-medium"
         >
-          Ordena ya
+          Ver detalles
         </button>
       </div>
     </div>
