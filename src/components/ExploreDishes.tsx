@@ -7,28 +7,28 @@ const dishes = [
     restaurant: 'Kintaro Sushi',
     rating: 4.1,
     totalRatings: 2453,
-    image: 'https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/ramen.svg',
   },
   {
-    name: 'Orden de Pastor',
+    name: 'Tacos al Pastor',
     restaurant: 'Tacos Hans',
     rating: 5,
     totalRatings: 892,
-    image: 'https://images.pexels.com/photos/4958792/pexels-photo-4958792.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/tacos.svg',
   },
   {
     name: 'Pizza Pepperoni',
     restaurant: 'Little Caesars',
     rating: 4.5,
     totalRatings: 1823,
-    image: 'https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/pizza.svg',
   },
   {
-    name: 'Snodan',
+    name: 'Sushi Bowl',
     restaurant: 'Kintaro Sushi',
     rating: 4.7,
     totalRatings: 3421,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/sushi.svg',
   },
 ];
 
@@ -41,9 +41,7 @@ export default function ExploreDishes() {
     <section id="explora" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Explora tus antojos
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Explora tus antojos</h2>
           <button
             onClick={handleViewAll}
             className="flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-medium transition-colors group"
